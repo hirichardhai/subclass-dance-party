@@ -5,6 +5,9 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-image: url('images/background.png');
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -22,9 +25,7 @@ body, a:link, a:visited, a:active{
 }
 
 .blinkyDancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+  position:fixed;
 }
 /*.dancer{
   border:10px solid red;
@@ -33,7 +34,16 @@ body, a:link, a:visited, a:active{
 }
 */
 .blueDancer{
-  border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
+  /*border:10px solid blue;
+  image: url('images/background.png');*/
+  /*border-radius:10px;*/
+  position:fixed;
+}
+
+.jamesRichard {
+  /*border:10px solid;*/
+  /*border-radius:10px;*/
+  position:fixed;
+/*background-image: url('images/background.png');*/
+/*background-size: cover;*/
 }
