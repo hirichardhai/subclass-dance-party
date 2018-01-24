@@ -1,3 +1,4 @@
+// Lisa
 var MakeBlueBlinkyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('blueDancer');
@@ -10,6 +11,16 @@ MakeBlueBlinkyDancer.prototype.oldStep = MakeDancer.prototype.step;
 
 MakeBlueBlinkyDancer.prototype.step = function() {
   console.log('old step:', this.oldStep);
-  // this.oldStep();
-  this.$node.toggle();
+  this.oldStep();
+  // this.$node.toggle();
+  // this.$node.hide(400);
+  // this.$node.flip()
+  // this.$node.show(800);
+  var randomTop = Math.floor(Math.random() * 100);
+  var randomLeft = Math.random() * 1000;
+  this.$node.animate({
+    left: randomLeft,
+    top: randomTop + '%'
+  }
+  );
 };

@@ -29,7 +29,7 @@ MakeDancer.prototype.lineUp = function(left) {
 //   var newLeft =
 
   var styleSettings = {
-    top: '600px',
+    top: '55%',
     left: left
   };
   this.$node.css(styleSettings);

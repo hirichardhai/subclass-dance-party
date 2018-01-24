@@ -26,7 +26,7 @@ $(document).ready(function() {
       // $("body").height() + 100,
       $("body").width() * Math.random(),
       // $("body").width() + 100,
-      Math.random() * 1000
+      Math.min(1000, Math.random() * 2000 + 1000)
     );
     window.dancers.push(dancer);
     // for (var i = 0; i < window.dancers.length; i++) {
@@ -40,9 +40,11 @@ $(document).ready(function() {
 
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp(counter);
+      delete window.dancers[i].oldStep;
+      delete window.dancers[i].step;
+      // window.dancers[i].$node.stop();
       counter += 100;
     }
-
   });
 });
 

@@ -12,10 +12,11 @@ MakeJamesRichardDancer.prototype.oldStep = MakeDancer.prototype.step;
 MakeJamesRichardDancer.prototype.step = function() {
   console.log('old step:', this.oldStep);
   var colorArray = ['red', 'blue', 'green', 'yellow'];
-
+  var randomTime = Math.random() * 3000;
   var index = Math.floor(Math.random() * 4);
   var newColor = colorArray[index];
   this.$node.css('color', newColor);
-  // this.oldStep();
-  this.$node.toggle();
+  this.oldStep();
+  this.$node.slideUp(randomTime);
+  this.$node.slideDown(randomTime);
 };
